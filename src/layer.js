@@ -1070,7 +1070,7 @@
     var success = options.success;
     delete options.success;
 
-    var local = options.locale || Class.pt.config.locale
+    var local = options.locale || ready.config.locale || Class.pt.config.locale
     var localeConfig = layer.localesConfig[local] || layer.localesConfig[layer.defaultLocale];
 
     return layer.open($.extend({
@@ -1153,7 +1153,7 @@
     options = options || {};
     if(!options.photos) return;
 
-    var local = options.locale || Class.pt.config.locale
+    var local = options.locale || ready.config.locale || Class.pt.config.locale
     var localeConfig = layer.localesConfig[local] || layer.localesConfig[layer.defaultLocale];
 
     //若 photos 并非选择器或 jQuery 对象，则为普通 object
